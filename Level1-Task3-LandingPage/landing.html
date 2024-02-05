@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="landing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Landing Page</title>
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="#homepage">HOME</a>
+            <a href="#aboutus">ABOUT US</a>
+            <a href="#services">SERVICES</a>
+            <a href="#services">CONTACT</a>
+            <input type="text" id="searchInput" onkeyup="filterPages()" placeholder="Search Here">
+        </div>
+    </nav>
+    
+    <section class="homepage">
+        <div class="container">
+        </div>
+    </section>
+    <section id="aboutus">
+        <div class="container">
+            <h2 class="main-heading">ABOUT US</h2>
+            <p class="sub-heading"><b>Welcome to TC Handcraft Creations, where creativity meets craftsmanship</p>
+            <p>We are passionate about creating unique, handcrafted items that bring joy and beauty to your life. Our
+                skilled artisans carefully craft each piece with attention to detail and love for the art of
+                handcrafting.</b></p>
+            <div id="about-us-image">
+                <img src="images\abc.jpg" alt="About Us Image">
+                <img src="images\bbb.jpg" alt="About Us Image">
+                <img src="images\flower.jpg" alt="About Us Image">
+            </div>
+            <div id="about-us-content">
+                <p>At Handcraft Creations, we value the tradition of handmade products and believe in the importance of
+                    preserving artisanal skills. Our collection includes a wide range of handcrafted items, from home
+                    decor to personalized gifts, each telling a story of skill, dedication, and creativity.</p>
+
+                <p>Join us in celebrating the beauty of handcrafting and explore our collection. Discover the artistry,
+                    uniqueness, and authenticity that come with every handcrafted piece. Thank you for choosing
+                    Handcraft Creations to add a touch of handmade elegance to your life.</p>
+            </div>
+
+            <button id="readMoreBtn" onclick="toggleAboutUs()" style="background-color: rgb(175, 32, 99); color: white; font-weight: bold; height: 45px; width: 150px">Read More</button>
+
+        </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleAboutUs() {
+            var aboutUsContent = document.getElementById("about-us-content");
+            var readMoreBtn = document.getElementById("button");
+
+            if (aboutUsContent.style.display === "none" || aboutUsContent.style.display === "") {
+                aboutUsContent.style.display = "block";
+                readMoreBtn.innerHTML = "Read Less";
+            } else {
+                aboutUsContent.style.display = "none";
+                readMoreBtn.innerHTML = "Read More";
+            }
+        }
+    </script>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <h2><b>OUR SERVICES</b></h2>
+                <div id="service-img">
+                    <img src="images\aaa.jpg" alt="Service Image">&nbsp;
+                    <img src="images\quality.jpg" alt="Service Image">&nbsp;
+                    <img src="images\unique.jpg" alt="Service Image">
+                </div>
+                <ul>
+                    <li><b>- Uniqueness and Personalization</li>
+                    <li>- Quality and Craftsmanship</li>
+                    <li>- Sustainability and Ethical Production</li>
+                    <li>- Story and Connection</li>
+                    <li>- Creativity and Inspiration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        function filterPages() {
+            var input, filter, nav, a, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            nav = document.getElementsByTagName('nav')[0];
+            a = nav.getElementsByTagName('a');
+    
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = '';
+                } else {
+                    a[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Website. All rights reserved.<br>Contact: + 94 11 5891 666<br>Address: 123 Main Street, Colombo 
+                
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

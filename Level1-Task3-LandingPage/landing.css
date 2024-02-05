@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+section.homepage {
+    background: url('images/front.png') center/cover no-repeat;
+    padding: 25% 0;
+}
+
+section.homepage h2 {
+    font-size: 2em;
+}
+
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.main-heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.sub-heading {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.readMoreBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.readMoreBtn:hover {
+    background-color: #c0392b;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+nav a {
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #566573;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+#about-us-content {
+    width: 60%;
+    text-align: left;
+}
+
+#about-us-image {
+    width: 33%;
+    margin-left: 5%;
+    white-space: nowrap;
+}
+
+#about-us-image img {
+    width: 93%;
+    height: auto;
+    border-radius: 28px;
+    margin-right: 5px;
+}
+
+#readMoreBtn {
+    margin-top: 20px;
+}
+
+#service-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#service-img div {
+    width: 29%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#service-img img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#services ul {
+    list-style: square;
+    padding: 0;
+    text-align: center;
+}
+
+#services ul li {
+    margin-bottom: 10px;
+}
